@@ -1,2 +1,1 @@
-# Dsaic_Team
-This is a repo for the projects I will handle with my Data Science and AI Club
+This repository will cover my journey in handling the Object Detection model for a dataset provided by the Center of Data Science and Artificial Intelligence Lab (DSAIL) known as the DSAIL Porini. The dataset containss over 8000 images of animals from the Dedan Kimathu University conservancy of animals in 6 classes. Impala, zebras, waterbucks, bushbucks, monkeys and warthogs. The lab has already done an image classification model on the dataset. I am going to handle object detection with YOLOV5 and if there is enough time, Tensorflow.
