@@ -43,7 +43,8 @@ Finally, we plot the image to determine the bounding box and the animal's locati
 %matplotlib inline 
 plt.imshow(np.squeeze(results.render()))
 plt.show()
-     
 ```
+
 Here is a snippet of our output when inferencing the model on new images.
+
 ![Inference](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3c60sbsu2altosw983wd.png)
