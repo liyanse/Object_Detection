@@ -19,4 +19,8 @@ Before labelling the images, ensure you have all your training images in one fol
 The dataset.yaml is a basic file that contains the location of your dataset, your test and train path, the number of classes you have and the label classes. Here is a snippet of how your dataset.yaml file should look like;
 ![dataset.yaml](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v5ez5wa2yndtq6nlersc.png)
 ## 4. Training the Model
- YOLOv5 model provides a step to step guide on training an object detection model with a custom dataset. This documentation is the same we used on our model. The documentation is present in their [GitHub](https://github.com/ultralytics/yolov5) and on [Training on Custom Object Dataset](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
+ YOLOv5 model provides a step to step guide on training an object detection model with a custom dataset. This documentation is the same we used on our model. The documentation is present in their [GitHub](https://github.com/ultralytics/yolov5) and on [Training on Custom Object Dataset](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data). Training starts by cloning the [YOLOv5 GitHub Repo](https://github.com/ultralytics/yolov5). The repository contains the pretrained YOLOV5 model that will be used to train our own object detection model. The code below allows you to train the model on custom data;
+ 
+```
+!cd yolov5 && python train.py --img 320 --batch 16 --epochs 500 --data dataset.yaml --weights yolov5s.pt --workers 2
+```
