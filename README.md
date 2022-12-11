@@ -17,5 +17,6 @@ The main process when working with data preprocessing is labeling the images cor
 Before labelling the images, ensure you have all your training images in one folder and their corresponding labels in a separate folder. For example, have all the images stored inside the "images" folder and all the labels inside the "label" folder.
 ## 3. Preparing the dataset.yaml file
 The dataset.yaml is a basic file that contains the location of your dataset, your test and train path, the number of classes you have and the label classes. Here is a snippet of how your dataset.yaml file should look like;
-
 ![dataset.yaml](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v5ez5wa2yndtq6nlersc.png)
+## 4. Training the Model
+ YOLOv5 model provides a step to step guide on training an object detection model with a custom dataset. This documentation is the same we used on our model. The documentation is present in their [GitHub](https://github.com/ultralytics/yolov5) and on [Training on Custom Object Dataset](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
