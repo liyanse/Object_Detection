@@ -25,3 +25,25 @@ You specify the image size you want to use, the number of epoch steps you want t
 ```
 !cd yolov5 && python train.py --img 320 --batch 16 --epochs 500 --data dataset.yaml --weights yolov5s.pt --workers 2
 ```
+## 5. Inferencing the Model
+We saved the model after successfully training it and used it to test on images and videos that were not in our dataset. Here's an example of our output from inferring the model on new images. To infer our model, we begin by loading either the best or last model to see which performs better.  
+```
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='/content/yolov5/runs/train/exp/weights/last.pt', force_reload=True)
+     
+```
+Then, using the model we loaded, we define the image path and predict its class.
+```
+img = os.path.join('data', 'images', '/content/data/images/DSC_0084.JPG')
+results = model(img)
+results.print()
+     
+```
+Finally, we plot the image to determine the bounding box and the animal's location. This is also done to confirm the model's predicted class.
+```
+%matplotlib inline 
+plt.imshow(np.squeeze(results.render()))
+plt.show()
+     
+```
+Here is a snippet of our output when inferencing the model on new images.
+![Inference](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3c60sbsu2altosw983wd.png)
