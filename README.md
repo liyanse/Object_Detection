@@ -14,3 +14,8 @@ The DSAIL Porini started is a dataset collected by DSAIL. It contains over 6000 
 ## 2. Labelling the Images
 The main process when working with data preprocessing is labeling the images correctly based on their classes. There are various ways to label the images with, in our case we used a program called LabelImg. The application allows you to draw a bounding box around the object present in the image and also define the class of the object. When drawing the bounding ox, ensure it encloses the main object only, this helps avoid creating noise in the dataset. Another important step is to ensure you select the type of labeling as YOLO’s labeling. This is because labelimg provides labeling for images for more object detection thus important to declare which one you are using. Below is a sample of the data processing done for all the images used to train our object detection model.
 ![Labelling Images](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r8af3xltjqeiz425hg9z.png)
+Before labelling the images, ensure you have all your training images in one folder and their corresponding labels in a separate folder. For example, have all the images stored inside the "images" folder and all the labels inside the "label" folder.
+## 3. Preparing the dataset.yaml file
+The dataset.yaml is a basic file that contains the location of your dataset, your test and train path, the number of classes you have and the label classes. Here is a snippet of how your dataset.yaml file should look like;
+
+![dataset.yaml](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v5ez5wa2yndtq6nlersc.png)
