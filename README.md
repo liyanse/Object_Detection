@@ -22,4 +22,9 @@ After successfully training, we saved the model and used it to test on images an
 The model we trained was not only used to classify the images of the animals from the conservancy, it was used to annotate the images automatically. Initially, it was tedious and time consuming to annotate the images with human effort. When used to annotate the whole dataset, the model took about an hour. This improves the output and reduces the manpower used in processing raw data.
 We hope to use the model in our camera traps to detect and annotate the animals and also study their behavior before the dataset is stored in the servers.
 
+# What models are we building?
+For this specific repository, I'm going to be building a lot of models for object detection
+We start with the Animal Class recognition, then the fruit class recognition
+
+
 
